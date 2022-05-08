@@ -26,3 +26,31 @@
 # AMQP协议：高级消息队列协议；是应用层协议的一个开放标准，为面向消息的中间件设计
 
 # 需安装erlang，并且需要版本一致；erlang的版本、centOS的版本
+- yum install erlang-23.3.4.4-1.el7.x86_64.rpm
+- yum install rabbitmq-server-3.8.19-1.el7.noarch.rpm 
+- systemctl start rabbitmq-server//启动
+- systemctl stop rabbitmq-server//关闭
+
+# 端口含义
+- 4369：epmd(Erlang Port Mapper Daemon), erlang服务端口
+- 5672：client端通信口（AMQP协议）
+- 15672：HTTP API客户端，管理UI（仅在启用了管理插件的情况下）
+- 25672：用于节点间通信（Erlang分发服务器端口）
+
+# 启动管理界面
+- rabbitmq-plugins  enable  rabbitmq_management
+
+# 查看插件
+- rabbitmq-plugins  list
+
+
+
+
+
+
+
+
+
+
+
+
