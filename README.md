@@ -53,6 +53,11 @@
 User为用户名， Tag为角色名(对应于上面的administrator，monitoring，policymaker，management，或其他自定义名称)。
 `
 
+# 命令行添加virtual hosts数据库给特定用户
+- rabbitmqctl  list_vhosts //查看数据库
+- rabbitmqctl add_vhost   vhostname【名称】//创建新的数据库
+- rabbitmqctl set_permissions -p vhostname username ".*" ".*" ".*"后边三个.*分别代表：配置权限、写权限、读权限
+
 
 
 
