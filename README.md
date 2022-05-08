@@ -34,7 +34,7 @@
 # 端口含义
 - 4369：epmd(Erlang Port Mapper Daemon), erlang服务端口
 - 5672：client端通信口（AMQP协议）
-- 15672：HTTP API客户端，管理UI（仅在启用了管理插件的情况下）
+- 15672：HTTP API客户端，管理UI（仅在启用了管理插件的情况下）http://192.168.33.10:15672/
 - 25672：用于节点间通信（Erlang分发服务器端口）
 
 # 启动管理界面
@@ -42,6 +42,16 @@
 
 # 查看插件
 - rabbitmq-plugins  list
+
+# rabbitmqctl 相关命令
+- rabbitmqctl  add_user  Username  Password 新增用户
+- rabbitmqctl  delete_user  Username 删除用户
+- rabbitmqctl  change_password  Username  Newpassword 修改用户密码
+- rabbitmqctl  list_users 查看当前用户列表
+- rabbitmqctl  set_user_tags  User  Tag 
+`
+User为用户名， Tag为角色名(对应于上面的administrator，monitoring，policymaker，management，或其他自定义名称)。
+`
 
 
 
