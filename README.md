@@ -58,6 +58,10 @@ User为用户名， Tag为角色名(对应于上面的administrator，monitoring
 - rabbitmqctl add_vhost   vhostname【名称】//创建新的数据库
 - rabbitmqctl set_permissions -p vhostname username ".*" ".*" ".*"后边三个.*分别代表：配置权限、写权限、读权限
 
+# PHP扩展
+- https://github.com/php-amqplib/php-amqplib
+- composer require php-amqplib/php-amqplib
+
 
 
 
