@@ -41,8 +41,16 @@
 # 需安装erlang，并且需要版本一致；erlang的版本、centOS的版本
 - yum install erlang-23.3.4.4-1.el7.x86_64.rpm
 - yum install rabbitmq-server-3.8.19-1.el7.noarch.rpm 
-- systemctl start rabbitmq-server//启动
-- systemctl stop rabbitmq-server//关闭
+- systemctl start rabbitmq-server//启动  service rabbitmq-server start
+- systemctl stop rabbitmq-server//关闭   service rabbitmq-server stop
+- chkconfig rabbitmq-server on //开机自启动
+
+`
+    Linux 服务管理两种方式service和systemctl
+    service命令 service命令其实是去/etc/init.d目录下，去执行相关程序
+    systemctl命令 是Linux系统最新的初始化系统(init),作用是提高系统的启动速度，尽可能启动较少的进程，尽可能更多进程并发启动
+    systemctl命令兼容了service
+`
 
 # 端口含义
 - 4369：epmd(Erlang Port Mapper Daemon), erlang服务端口
