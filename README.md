@@ -25,6 +25,19 @@
 
 # AMQP协议：高级消息队列协议；是应用层协议的一个开放标准，为面向消息的中间件设计
 
+# erlang版本和rabbit一致对照：https://www.rabbitmq.com/which-erlang.html
+# 安装相关网址
+- https://www.rabbitmq.com/download.html 选择系统
+- https://www.rabbitmq.com/install-rpm.html 基于RPM的linux安装
+
+## 两种安装方式 rabbitmq
+- 在Cloudsmith.io或PackageCloud上使用 Yum 存储库（强烈推荐此选项）安装包
+- 下载软件包并使用rpm安装它。此选项将需要手动安装所有包依赖项。
+
+## PackageCloud Yum 存储库安装 rabbitmq
+- 脚本库下载安装 https://packagecloud.io/rabbitmq/rabbitmq-server/install#bash-rpm
+- 选择相应的系统下载 类似 RPM 和 centos7（el7）
+
 # 需安装erlang，并且需要版本一致；erlang的版本、centOS的版本
 - yum install erlang-23.3.4.4-1.el7.x86_64.rpm
 - yum install rabbitmq-server-3.8.19-1.el7.noarch.rpm 
