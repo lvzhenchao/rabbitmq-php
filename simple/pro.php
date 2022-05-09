@@ -14,7 +14,7 @@ $connection = new AMQPStreamConnection("127.0.0.1", "5672", "lzc", "lzc", "order
 $channel = $connection->channel();
 
 //声明队列：着重看参数
-$channel->queue_declare($queue_name, false, true, false, false);
+$channel->queue_declare($queue_name, false, true, false, false);//第三个参数：队列持久化
 
 $data = "this is message";
 
