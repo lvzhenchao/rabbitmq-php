@@ -3,8 +3,10 @@ require_once '../vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
+//数据库名称
 $v_host = "order";
 
+//队列名称
 $queue_name = "goods";
 
 //创建连接
@@ -16,6 +18,7 @@ $channel = $connection->channel();
 //声明队列：着重看参数
 $channel->queue_declare($queue_name, false, true, false, false);//第三个参数：队列持久化
 
+//数据
 $data = "this is message";
 
 //创建消息
