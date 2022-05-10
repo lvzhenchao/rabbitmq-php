@@ -10,7 +10,7 @@ $v_host = "order";
 $queue_name = "goods";
 
 //创建连接
-$connection = new AMQPStreamConnection("127.0.0.1", "5672", "lzc", "lzc", "order");
+$connection = new AMQPStreamConnection("127.0.0.1", "5672", "lzc", "lzc", $v_host);
 
 //创建连接
 $channel = $connection->channel();
