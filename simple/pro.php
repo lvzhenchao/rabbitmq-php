@@ -19,7 +19,7 @@ $channel = $connection->channel();
 $channel->queue_declare($queue_name, false, true, false, false);//第三个参数：队列持久化
 
 //数据
-$data = "this is message";
+$data = "this is message ".date("Y-m-d H:i:s");
 
 //创建消息
 $msg = new AMQPMessage($data, ["delivery_mode" => AMQPMessage::DELIVERY_MODE_PERSISTENT]);//消息持久化
