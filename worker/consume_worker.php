@@ -21,8 +21,13 @@ $channel->queue_declare($queue_name, false, true, false, false);//第三个参�
 $callback = function ($msg) {
 //    print_r($msg);
     echo 'received: ',$msg->body,"\n";
+
+    $msg->ack();//发出确认
 };
-$channel->basic_consume($queue_name, '', false, true, false, false, $callback);
+
+$channel->basic_qos(null, 1, null);
+
+$channel->basic_consume($queue_name, '', false, false, false, false, $callback);//第四个参数：是否自动确认消息被消费
 //监控
 while ($channel->is_open()) {
     $channel->wait();
