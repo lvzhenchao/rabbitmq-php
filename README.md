@@ -82,6 +82,7 @@ User为用户名， Tag为角色名(对应于上面的administrator，monitoring
 # PHP扩展
 - https://github.com/php-amqplib/php-amqplib
 - composer require php-amqplib/php-amqplib
+- https://www.rabbitmq.com/getstarted.html 文档查看
 
 
 
