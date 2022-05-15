@@ -44,7 +44,7 @@ class Login extends Command
             //print_r($msg);
             //echo 'received: ',$msg->body,"\n";
             $output->writeln($msg->body);//此处可以写入数据库
-            list($login_msg, $login_time) = explode("-", $msg->body);
+            list($login_msg, $login_time) = explode("/", $msg->body);
             $res = Db::table('login_log')->insert(['msg'=>$login_msg, 'login_time'=>$login_time]);
             if ($res) {
                 $msg->ack();//插入数据成功后 可以 手动确认信息
