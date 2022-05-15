@@ -18,15 +18,13 @@ class Goods
 
     public function paySuccess(Request $request)
     {
-        Db::table('goods_order')->insert(['is_pay'=>1]);
-        $id = $request->param('id');
+        $id = Db::table('goods_order')->insertGetId(['is_pay'=>1]);
         $this->sendMsg($id);
     }
 
     public function payFail(Request $request)
     {
-        Db::table('goods_order')->insert(['is_pay'=>0]);
-        $id = $request->param('id');
+        $id = Db::table('goods_order')->insertGetId(['is_pay'=>0]);
         $this->sendMsg($id);
     }
 
