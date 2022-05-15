@@ -4,6 +4,7 @@
 namespace app\controller;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
+use think\facade\Db;
 use think\Request;
 
 class Login
@@ -44,7 +45,7 @@ class Login
         $channel->queue_declare($queue_name, false, true, false, false);//第三个参数：队列持久化
 
         //数据
-        $data = "lzc login success-".date("Y-m-d H:i:s");
+        $data = "lzc login success -".date("Y-m-d H:i:s");
 
         //创建消息并标记消息持久化
         $msg = new AMQPMessage($data, ["delivery_mode" => AMQPMessage::DELIVERY_MODE_PERSISTENT]);//消息持久化
