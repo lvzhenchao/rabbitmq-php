@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+        <title>商品列表</title>
+
+        <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.min.css">
+</head>
+
+<body class="bs-docs-home">
+    <div class="container theme-showcase">
+        <h1 style=" line-height:2em;"> </h1><br />
+      
+        <div class="row">
+            <div class="col-sm-3"></div>
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>商品列表</strong></h3>
+                </div>
+                <div class="panel-body">
+                   <div class="alert  alert-dismissable">
+
+            
+                       <div class="table-responsive">
+                           <table  border="0" cellspacing="0" cellpadding="0" class="table">
+<!--                               <tr class=" label-primary">-->
+<!--                                   <th scope="col" width="20%" ><span style="color:white">id</span></th>-->
+<!--                                   <th scope="col"><span style="color:white">商品标题</span></th>-->
+<!--								   <th scope="col"><span style="color:white">操作</span></th>-->
+<!--                               </tr>-->
+
+<!--                               <tr class="success">-->
+<!--                                   <td>1</td>-->
+<!--                                   <td>Redmi A65 65英寸4K HDR超高清人工智能网络液晶教育平板电视红米L65R6-A</td>-->
+<!--								    <td><button class="btn btn-default" type="button"  >付款成功</button>-->
+<!--									<button class="btn btn-danger" type="button"  >付款失败</button></td>-->
+<!--                               </tr>-->
+<!--							   -->
+<!--							   <tr class="success">-->
+<!--                                   <td>2</td>-->
+<!--                                   <td>Redmi A65 65英寸4K HDR超高清人工智能网络液晶教育平板电视红米L65R6-A</td>-->
+<!--								    <td><button class="btn btn-default" type="button"  >付款成功</button>-->
+<!--									<button class="btn btn-danger" type="button"  >付款失败</button></td>-->
+<!--                               </tr>-->
+<!--							   -->
+<!--							   <tr class="success">-->
+<!--                                   <td>3</td>-->
+<!--                                   <td>Redmi A65 65英寸4K HDR超高清人工智能网络液晶教育平板电视红米L65R6-A</td>-->
+<!--								    <td><button class="btn btn-default" type="button"  >付款成功</button>-->
+<!--									<button class="btn btn-danger" type="button"  >付款失败</button></td>-->
+<!--                               </tr>-->
+							   
+							   <tr class="success">
+                                   <td>4</td>
+                                   <td>Redmi A65 65英寸4K HDR超高清人工智能网络液晶教育平板电视红米L65R6-A</td>
+								    <td><button id="pay_sun" class="btn btn-default" type="button"  >付款成功</button>
+									<button id="pay_fail"  class="btn btn-danger" type="button"  >付款失败</button></td>
+                               </tr>
+                           </table>
+                       </div> 
+						<div class="col-sm-12">
+                   </div>
+               </div>
+           </div>
+     
+        </div>
+    </div> 
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+<script>
+    $("#pay_sun").click(function () {
+        $.post('pay_success', {is_pay:1},function () {
+            alert("支付成功");
+        });
+    });
+    $("#pay_fail").click(function () {
+        $.post('pay_fail', {is_pay:2},function () {
+            alert("支付失败");
+        });
+    });
+</script>

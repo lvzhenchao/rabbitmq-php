@@ -18,3 +18,7 @@ Route::get('hello/:name', 'index/hello');
 
 Route::get('/', 'login/index');
 Route::post('/login', 'login/login');
+
+Route::get('/goods', 'goods/index');
+Route::post('/pay_success', 'goods/paySuccess');
+Route::post('/pay_fail', 'goods/payFail');

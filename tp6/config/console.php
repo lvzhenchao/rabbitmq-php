@@ -6,6 +6,7 @@ return [
     // 指令定义
     'commands' => [
         'login_msg' => 'app\command\Login',
+        'order_msg' => 'app\command\Order',
     ],
 
 ];
