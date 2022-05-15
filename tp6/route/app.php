@@ -17,3 +17,4 @@ Route::get('think', function () {
 Route::get('hello/:name', 'index/hello');
 
 Route::get('/', 'login/index');
+Route::post('/login', 'login/login');
