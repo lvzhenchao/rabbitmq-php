@@ -22,3 +22,5 @@ Route::post('/login', 'login/login');
 Route::get('/goods', 'goods/index');
 Route::post('/pay_success', 'goods/paySuccess');
 Route::post('/pay_fail', 'goods/payFail');
+
+Route::get('/simple', 'mq-simple/send');
