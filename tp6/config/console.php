@@ -8,6 +8,7 @@ return [
         'login_msg' => 'app\command\Login',
         'order_msg' => 'app\command\Order',
         'simple_msg' => 'app\command\MqSimple',
+        'work_msg' => 'app\command\MqWork',
     ],
 
 ];
