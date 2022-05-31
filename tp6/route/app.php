@@ -24,3 +24,4 @@ Route::post('/pay_success', 'goods/paySuccess');
 Route::post('/pay_fail', 'goods/payFail');
 
 Route::get('/simple', 'mq-simple/send');
+Route::get('/work', 'mq-work/send');

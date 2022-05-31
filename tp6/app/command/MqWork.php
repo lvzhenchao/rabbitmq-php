@@ -35,12 +35,23 @@ class MqWork extends Command
         $channel->basic_qos(null, 1, null);
 
         //消息消费
-        $channel->basic_consume($queue, '', false, true, false, false, function ($msg) use ($output)  {
+//        $channel->basic_consume($queue, '', false, true, false, false, function ($msg) use ($output)  {
+//
+//            //模拟耗时
+//            sleep(3);
+//
+//            $output->writeln(" Received " . $msg->body .  PHP_EOL);
+//        });
+
+        //消息消费添加确认机制ack：第四个参数修改为false
+        $channel->basic_consume($queue, '', false, false, false, false, function ($msg) use ($output)  {
 
             //模拟耗时
             sleep(3);
 
             $output->writeln(" Received " . $msg->body .  PHP_EOL);
+
+            $msg->ack();//手动确认
         });
 
         while (count($channel->callbacks)) {
@@ -53,3 +64,6 @@ class MqWork extends Command
         $connection->close();
     }
 }
+
+//消息确认机制：防止正在处理的消息，被杀掉，或丢失；
+//消费者进程异常退出（通道关闭，连接断开或者TCP连接丢失）、
