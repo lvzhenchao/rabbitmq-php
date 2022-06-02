@@ -26,3 +26,4 @@ Route::post('/pay_fail', 'goods/payFail');
 Route::get('/simple', 'mq-simple/send');
 Route::get('/work', 'mq-work/send');
 Route::get('/pubSub', 'mq-pub-sub/send');
+Route::get('/direct', 'mq-direct/send');

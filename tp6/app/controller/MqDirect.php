@@ -6,7 +6,7 @@ namespace app\controller;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-class MqPubSub
+class MqDirect
 {
 
     /**

@@ -10,6 +10,8 @@ return [
         'simple_msg' => 'app\command\MqSimple',
         'work_msg'   => 'app\command\MqWork',
         'pubSub_msg' => 'app\command\MqPubSub',
+        'direct_msg1' => 'app\command\MqDirect',
+        'direct_msg2' => 'app\command\MqDirect2',
     ],
 
 ];
