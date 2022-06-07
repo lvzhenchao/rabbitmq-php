@@ -12,6 +12,8 @@ return [
         'pubSub_msg' => 'app\command\MqPubSub',
         'direct_msg1' => 'app\command\MqDirect',
         'direct_msg2' => 'app\command\MqDirect2',
+        'top_msg1' => 'app\command\MqTop',
+        'top_msg2' => 'app\command\MqTop2',
     ],
 
 ];

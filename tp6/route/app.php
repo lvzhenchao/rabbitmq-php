@@ -27,3 +27,4 @@ Route::get('/simple', 'mq-simple/send');
 Route::get('/work', 'mq-work/send');
 Route::get('/pubSub', 'mq-pub-sub/send');
 Route::get('/direct', 'mq-direct/send');
+Route::get('/top', 'mq-top/send');
